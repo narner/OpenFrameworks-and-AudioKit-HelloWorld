@@ -1,8 +1,9 @@
 #include "ofApp.h"
 
+OscillatorInstrument *instrument = [[OscillatorInstrument alloc] init];
+
 //--------------------------------------------------------------
 void ofApp::setup(){
-
 }
 
 //--------------------------------------------------------------
@@ -17,12 +18,12 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-
+    [instrument startSound];
 }
 
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key){
-
+    [instrument stopSound];
 }
 
 //--------------------------------------------------------------
