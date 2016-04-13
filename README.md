@@ -1,13 +1,28 @@
 # OpenFrameworks-and-AudioKit
 
-If you're making an OpenFrameworks project that will only run on an OS X device, it's possible to include AudioKit in your 
-OpenFrameworks project. AudioKit gives you the ability to quickly prototype great sounding instruments, and is written in pure Swift. 
+### Introduction
+
+If you're making an OpenFrameworks project that will only run on an OS X device, it's possible to include [AudioKit](http://audiokit.io/)
+in your OpenFrameworks project. AudioKit gives you the ability to quickly prototype great sounding instruments, and is written in pure 
+Swift. If you're an OpenFrameworks developer who's not familiar with AudioKit, check out some of the work shown in our 
+[gallery](http://audiokit.io/gallery/). Hopefully they will inspire you to use AudioKit in some of your games or installations! This 
+tutorial will show you how to add AudioKit to your OpenFrameworks project, and create a simple Hello World example. While it's a rather 
+simple sounding oscillator, it's important to remember that anything you hear in the Gallery pages that you like can also be implemented
+in your Open Frameworks project. 
 
 
-To start, clone AudioKit. Make sure that you're using AudioKit 3.1.1 and later (photo)
+### Getting Started
+
+Before we start, make sure that you have: 
+
+1) Xcode 7.3 installed 
+
+2) OpenFrameworks 0.9.3 installed
+
+3) You have a [copy of AudioKit](https://github.com/audiokit/AudioKit). Make sure that you're using AudioKit 3.1.1 and later (photo)
 
 We can go ahead and create our OpenFrameworks project now. Using the Project Generator (...make sure to put exact title, and show that 
-we're putting this in "my apps"). 
+we're putting this in "my apps") (photo). 
 
 Since AudioKit is a Swift library, there's a few things we'll need to consider. First, any file that we want to call AudioKit code from
 will need to be an Objective-C++ file. This is because while it's possible to call Swift code from Objective-C++ code, it is not possible
@@ -15,7 +30,7 @@ to do so from C++. To change the file type, change the file extension from `.cpp
 `ofApp.cpp` and our `main.cpp` files (photo). After you've done this, change the source type to "Objective-C++" source on the right hand 
 side: (photo). 
 
-Again, it's important to remember that because we're changing the file types, your OpenFrameworks project will only compile on an OS 
+Again, it's important to remember that because we're changing the file types, your OpenFrameworks project will only compile on an OS X
 device. 
 
 To add AudioKit to your project, navigate to the `AudioKit OSX.xcodeproj` inside your AudioKit folder (photo), and drag it into your 
