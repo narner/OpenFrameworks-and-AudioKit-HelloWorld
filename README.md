@@ -27,7 +27,7 @@ We can go ahead and create our OpenFrameworks project now. Using the Project Gen
 create a new OS X project. Call it "OF-AK-HelloWorld", and set it's location to be inside of the 
 "My Apps" folder:
 
-![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/myApps.png)
+![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/myApps.png)
 
 Since AudioKit is a Swift library, there's a few things we'll need to consider. First, any file that
 we want to call AudioKit code from will need to be an Objective-C++ file. This is because while it's 
@@ -38,11 +38,11 @@ the file type, change the file extension from `.cpp` to `.mm`. We're going to do
 
 Your file information will look like this at first:
 
-![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/cpp.png)
+![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/cpp.png)
 
 ...and should look like this once you've changed it's information:
 
-![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/mm.png)
+![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/mm.png)
 
 Again, it's important to remember that because we're changing the file types, your OpenFrameworks 
 project will only compile on an OS X device. 
@@ -50,25 +50,25 @@ project will only compile on an OS X device.
 Because AudioKit 3.1.1 requires Swift 3, our app's Deployment Target needs to be OS X 10.11. Go to 
 your project's "General" tab 
 
-![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/generalTab.png)
+![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/generalTab.png)
 
 and make sure that the Deployment Target is set to 10.11.
 
 Now, we can add AudioKit to our project. Navigate to the `AudioKit OSX.xcodeproj` inside your 
 AudioKit folder (photo), 
 
-![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/akProject.png)
+![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/akProject.png)
 
 and drag it into your OpenFrameworks Xcode project (photo). 
 
 Now, we're going to add in the path to the AudioKit OS X Framework. Go to Build Settings in Xcode, 
 and search for "Framework Search Paths":
 
-![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/frameworkSearchPaths.png)
+![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/frameworkSearchPaths.png)
 
 And enter the path to your AudioKit-OSX framework:
 
-![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/frameworkPath.png)
+![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/frameworkPath.png)
 
 Your path will look different based on where your AudioKit code is on your machine.
 
@@ -82,7 +82,7 @@ into Swift code from Objective-C++. You can find this file by going to Build Set
 for "Interface Header". You should see a listing for an "Objective-C Generated Interface Header 
 Name", and it should be named `OF_AK_HelloWorldDebug-Swift.h`:
 
-![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/interfaceHeader.png)
+![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/interfaceHeader.png)
 
 
 Go to your `ofApp.h` file and add the import statement below:
