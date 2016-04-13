@@ -20,7 +20,7 @@ Before we start, make sure that you have:
 
 2) [OpenFrameworks 0.9.3](http://openframeworks.cc/download/) downloaded
 
-3) You've downloaded the source code of [copy of AudioKit](https://github.com/audiokit/AudioKit), and
+3) You've downloaded the source code of [AudioKit](https://github.com/audiokit/AudioKit), and
 that your branch is pointed to 3.1.1 or later.
 
 We can go ahead and create our OpenFrameworks project now. Using the Project Generator, go ahead and 
