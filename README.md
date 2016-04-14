@@ -105,7 +105,10 @@ Add the code below to create a simple oscillator instrument, as well as function
 on and off:
 
 ```
-@objc public class OscillatorInstrument: NSObject {
+import Foundation
+import AudioKit
+
+public class OscillatorInstrument: NSObject {
     var oscillator = AKOscillator()
     
     public override init() {
@@ -128,9 +131,15 @@ on and off:
 
 Now, go to your `ofApp.mm` file, and add the line below as a global variable:
 
-`OscillatorInstrument *instrument = [[OscillatorInstrument alloc] init];`
+```
+#include "ofApp.h"
 
-![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/oscillatorCreation.png)
+OscillatorInstrument *instrument = [[OscillatorInstrument alloc] init];
+
+//--------------------------------------------------------------
+void ofApp::setup(){
+}
+```
 
 This will create an instance of our `OscillatorInstrument` class called "Instrument" as soon as our 
 app has started. 
