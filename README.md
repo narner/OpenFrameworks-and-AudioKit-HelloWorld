@@ -54,6 +54,8 @@ your project's "General" tab
 
 and make sure that the Deployment Target is set to 10.11.
 
+### Adding AudioKit
+
 Now, we can add AudioKit to our project. Navigate to the `AudioKit OSX.xcodeproj` inside your 
 AudioKit folder (photo), 
 
@@ -84,10 +86,8 @@ Name", and it should be named `OF_AK_HelloWorldDebug-Swift.h`:
 
 ![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/interfaceHeader.png)
 
-
 Go to your `ofApp.h` file and add the import statement below:
 `#import "OF_AK_HelloWorldDebug-Swift.h`
-
 
 Build your project again to make sure that you've sucesfully imported this file. If you get an 
 error, you probably forgot to build after you created your `OscillatorInstrument.swift` file. 
@@ -118,6 +118,8 @@ on and off:
     
 }
 ```
+
+### Creating and Interacting with our Oscillator 
 
 Now, go to your `ofApp.mm` file, and add the line below as a global variable:
 
