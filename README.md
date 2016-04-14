@@ -20,15 +20,11 @@ Before we start, make sure that you have:
 
 2) [OpenFrameworks 0.9.3](http://openframeworks.cc/download/) downloaded for OS X
 
-![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/ofInstall.png)
-
 3) You've downloaded the [AudioKit-OSX-3.1.zip](http://github.com/audiokit/AudioKit/releases/download/v3.1.1/AudioKit-OSX-3.1.1.zip).
 
 We can create our OpenFrameworks project now. Using the Project Generator, go ahead 
 and create a new OS X project. Call it "OF-AK-HelloWorld", and set its location to be inside of 
-the "My Apps" folder:
-
-![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/myApps.png)
+the default "My Apps" folder:
 
 Since AudioKit is a Swift framework, there's a few things we'll need to consider. First, any file 
 that we want to call AudioKit code from will need to be an Objective-C++ file. This is because 
@@ -76,7 +72,7 @@ and search for "Framework Search Paths" under your Target:
 
 And enter the path to your AudioKit-OSX framework:
 
-![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/frameworkPath.png)
+![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/AudioKitFrameworkSearchPath.png)
 
 Your path will look different based on where your AudioKit code is on your machine.
 
