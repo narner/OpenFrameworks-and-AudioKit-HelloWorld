@@ -9,7 +9,7 @@
 import Foundation
 import AudioKit
 
-@objc public class OscillatorInstrument: NSObject {
+public class OscillatorInstrument: NSObject {
     var oscillator = AKOscillator()
     
     public override init() {

@@ -11,8 +11,6 @@
 		E45C623F1CBDB1C60062F645 /* OscillatorInstrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45C623E1CBDB1C60062F645 /* OscillatorInstrument.swift */; };
 		E4B69E200A3A1BDC003C02F2 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.mm */; };
 		E4B69E210A3A1BDC003C02F2 /* ofApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.mm */; };
-		E4C26B721CBEF899008D8A63 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C26B711CBEF881008D8A63 /* AudioKit.framework */; };
-		E4C26B731CBEF899008D8A63 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E4C26B711CBEF881008D8A63 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,20 +20,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = E4B27C1510CBEB8E00536013;
 			remoteInfo = openFrameworks;
-		};
-		E4C26B701CBEF881008D8A63 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E4C26B6C1CBEF880008D8A63 /* AudioKit For OSX.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C42F36CC1C0582E6000E937C;
-			remoteInfo = AudioKit;
-		};
-		E4C26B741CBEF899008D8A63 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E4C26B6C1CBEF880008D8A63 /* AudioKit For OSX.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C42F36CB1C0582E6000E937C;
-			remoteInfo = AudioKit;
 		};
 		E4EEB9AB138B136A00A80321 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -53,7 +37,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E4C26B731CBEF899008D8A63 /* AudioKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,7 +51,6 @@
 		E4B69E1E0A3A1BDC003C02F2 /* ofApp.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = ofApp.mm; path = src/ofApp.mm; sourceTree = SOURCE_ROOT; };
 		E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ofApp.h; path = src/ofApp.h; sourceTree = SOURCE_ROOT; };
 		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
-		E4C26B6C1CBEF880008D8A63 /* AudioKit For OSX.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AudioKit For OSX.xcodeproj"; path = "../../../../../../../../Users/nicholasarner/Development/AudioKit/AudioKit/OSX/AudioKit For OSX.xcodeproj"; sourceTree = "<group>"; };
 		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,7 +60,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4C26B721CBEF899008D8A63 /* AudioKit.framework in Frameworks */,
 				E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,7 +92,6 @@
 		E4B69B4A0A3A1720003C02F2 = {
 			isa = PBXGroup;
 			children = (
-				E4C26B6C1CBEF880008D8A63 /* AudioKit For OSX.xcodeproj */,
 				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
 				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
 				E4B69E1C0A3A1BDC003C02F2 /* src */,
@@ -132,14 +112,6 @@
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
-		};
-		E4C26B6D1CBEF880008D8A63 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E4C26B711CBEF881008D8A63 /* AudioKit.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
 		};
 		E4EEC9E9138DF44700A80321 /* openFrameworks */ = {
 			isa = PBXGroup;
@@ -166,7 +138,6 @@
 			);
 			dependencies = (
 				E4EEB9AC138B136A00A80321 /* PBXTargetDependency */,
-				E4C26B751CBEF899008D8A63 /* PBXTargetDependency */,
 			);
 			name = "OF-AK-HelloWorld";
 			productName = myOFApp;
@@ -197,10 +168,6 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = E4C26B6D1CBEF880008D8A63 /* Products */;
-					ProjectRef = E4C26B6C1CBEF880008D8A63 /* AudioKit For OSX.xcodeproj */;
-				},
-				{
 					ProductGroup = E4328144138ABC890047C5CB /* Products */;
 					ProjectRef = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
 				},
@@ -218,13 +185,6 @@
 			fileType = archive.ar;
 			path = openFrameworksDebug.a;
 			remoteRef = E4328147138ABC890047C5CB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E4C26B711CBEF881008D8A63 /* AudioKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = AudioKit.framework;
-			remoteRef = E4C26B701CBEF881008D8A63 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -259,11 +219,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E4C26B751CBEF899008D8A63 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AudioKit;
-			targetProxy = E4C26B741CBEF899008D8A63 /* PBXContainerItemProxy */;
-		};
 		E4EEB9AC138B136A00A80321 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = openFrameworks;
