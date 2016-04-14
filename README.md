@@ -150,7 +150,6 @@ call to our "Stop" method inside of the `mousePressed` event method:
 ```
 void ofApp::mousePressed(int x, int y, int button){
     [instrument startSound];
-
 }
 ```
 
