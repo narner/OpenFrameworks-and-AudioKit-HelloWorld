@@ -157,7 +157,6 @@ void ofApp::mousePressed(int x, int y, int button){
 And, to stop our oscillator, add a call to our "Stop" method inside of the `mouseReleased method`:
 
 ```
-//--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button){
     [instrument stopSound];
 }
