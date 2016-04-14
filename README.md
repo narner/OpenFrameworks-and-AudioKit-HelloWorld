@@ -104,7 +104,7 @@ Go to `OscillatorInstrument.swift`, and import AudioKit by adding the line below
 Add the code below to create a simple oscillator instrument, as well as functions for turning it
 on and off:
 
-```
+```swift
 import Foundation
 import AudioKit
 
@@ -131,7 +131,7 @@ public class OscillatorInstrument: NSObject {
 
 Now, go to your `ofApp.mm` file, and add the line below as a global variable:
 
-```
+```Objective-C
 #include "ofApp.h"
 
 OscillatorInstrument *instrument = [[OscillatorInstrument alloc] init];
@@ -147,7 +147,7 @@ app has started.
 Now, we want to give our app the ability to start and stop our oscillator. To do that, we'll add a 
 call to our "Stop" method inside of the `mousePressed` event method:
 
-```
+```C++
 void ofApp::mousePressed(int x, int y, int button){
     [instrument startSound];
 }
@@ -155,7 +155,7 @@ void ofApp::mousePressed(int x, int y, int button){
 
 And, to stop our oscillator, add a call to our "Stop" method inside of the `mouseReleased method`:
 
-```
+```C++
 void ofApp::mouseReleased(int x, int y, int button){
     [instrument stopSound];
 }
