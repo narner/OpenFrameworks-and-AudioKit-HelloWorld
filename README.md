@@ -42,7 +42,7 @@ Your file information will look like this at first:
 ![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/mm.png)
 
 Again, it's important to remember that because we're changing the file types, your OpenFrameworks 
-project will only compile on an OS X Mdevice. 
+project will only compile on an OS X device. 
 
 Because AudioKit 3.1.1 requires Swift 2.2, our app's Deployment Target needs to be OS X 10.11. Go 
 to your project's "General" tab 
