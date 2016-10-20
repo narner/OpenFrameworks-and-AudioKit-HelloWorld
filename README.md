@@ -77,7 +77,7 @@ And enter the path to your AudioKit-OSX framework:
 Your path will look different based on where the framework is on your machine. If you're planning
 on distributing your app, we recommend copying the framework into your project:
 
-![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/copiedFrameworks.png)
+![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/copiedFramework.png)
 
 Make sure that the framework is included in your app's Embedded Binaries listing:
 
