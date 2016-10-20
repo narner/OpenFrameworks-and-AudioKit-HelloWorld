@@ -16,11 +16,11 @@ pages that you like can also be implemented in your Open Frameworks project.
 
 Before we start, make sure that you have: 
 
-1) [Xcode 7.3](https://developer.apple.com/xcode/download/) installed 
+1) [Xcode 8](https://developer.apple.com/xcode/download/) installed 
 
-2) [OpenFrameworks 0.9.3](http://openframeworks.cc/download/) downloaded for OS X
+2) [OpenFrameworks 0.9.4](http://openframeworks.cc/download/) downloaded for OS X
 
-3) You've downloaded the [AudioKit-OSX-3.1.zip](http://github.com/audiokit/AudioKit/releases/download/v3.1.1/AudioKit-OSX-3.1.1.zip).
+3) You've downloaded the [AudioKit-OSX-3.4.2.zip](https://github.com/audiokit/AudioKit/releases/tag/v3.4.2).
 
 We can create our OpenFrameworks project now. Using the Project Generator, go ahead 
 and create a new OS X project. Call it "OF-AK-HelloWorld", and set its location to be inside of 
@@ -28,9 +28,9 @@ the default "My Apps" folder:
 
 Since AudioKit is a Swift framework, there's a few things we'll need to consider. First, any file 
 that we want to call AudioKit code from will need to be an Objective-C++ file. This is because 
-while it's possible to call Swift code from Objective-C++ code, it is not possible to do so from C+ 
-To change the file type, change the file extension from `.cpp` to `.mm`. We're going to do this for 
-our`ofApp.cpp` and our `main.cpp` files. After you've done this, change the file type to 
+while it's possible to call Swift code from Objective-C++ code, it is not possible to do so from 
+C++. To change the file type, change the file extension from `.cpp` to `.mm`. We're going to do 
+this for our`ofApp.cpp` and our `main.cpp` files. After you've done this, change the file type to 
 "Objective-C++" source. 
 
 Your file information will look like this at first:
@@ -44,7 +44,7 @@ Your file information will look like this at first:
 Again, it's important to remember that because we're changing the file types, your OpenFrameworks 
 project will only compile on an OS X device. 
 
-Because AudioKit 3.1.1 requires Swift 2.2, our app's Deployment Target needs to be OS X 10.11. Go 
+Because AudioKit 3.4.2 requires Swift 3.0, our app's Deployment Target needs to be OS X 10.11. Go 
 to your project's "General" tab 
 
 ![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/generalTab.png)
@@ -65,8 +65,8 @@ build script as follows:
 > PLATFORMS=OSX ./build_frameworks.sh
 ```
 
-Now, we're going to add in the path to the AudioKit OS X Framework. Go to Build Settings in Xcode, 
-and search for "Framework Search Paths" under your Target:
+Now, we're going to add in the path to the AudioKit OS X Framework. Go to Build Settings in 
+Xcode, and search for "Framework Search Paths" under your Target:
 
 ![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/frameworkSearchPaths.png)
 
@@ -74,17 +74,25 @@ And enter the path to your AudioKit-OSX framework:
 
 ![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/AudioKitFrameworkSearchPath.png)
 
-Your path will look different based on where your AudioKit code is on your machine.
+Your path will look different based on where the framework is on your machine. If you're planning
+on distributing your app, we recommend copying the framework into your project:
 
-Now, we're going to create a Swift file to define our AudioKit instrument in. We're going to call our file `OscillatorInstrument.swift`. 
+![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/copiedFrameworks.png)
+
+Make sure that the framework is included in your app's Embedded Binaries listing:
+
+![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/embeddedBinaries.png)
+
+Now, we're going to create a Swift file to define our AudioKit instrument in. We're going to call 
+our file `OscillatorInstrument.swift`. 
 
 Xcode will ask you if you want to create a Bridging Header...we don't need one, as we're calling 
 Swift code from Objective-C++, and not the other way around.
 
-Now, build your project. This will auto-generate a `Swift.h` file, which is what allows us to call 
-into Swift code from Objective-C++. You can find this file by going to Build Settings, and searching
-for "Interface Header". You should see a listing for an "Objective-C Generated Interface Header 
-Name", and it should be named `OF_AK_HelloWorldDebug-Swift.h`:
+Now, build your project. This will auto-generate a `Swift.h` file, which is what allows us to 
+call into Swift code from Objective-C++. You can find this file by going to Build Settings, and 
+searching for "Interface Header". You should see a listing for an "Objective-C Generated 
+Interface Header Name", and it should be named `OF_AK_HelloWorldDebug-Swift.h`:
 
 ![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/interfaceHeader.png)
 
@@ -108,7 +116,7 @@ on and off:
 import Foundation
 import AudioKit
 
-public class OscillatorInstrument: NSObject {
+open class OscillatorInstrument: NSObject {
     var oscillator = AKOscillator()
     
     public override init() {
@@ -116,11 +124,11 @@ public class OscillatorInstrument: NSObject {
         AudioKit.start()
     }
     
-    public func startSound() {
+    open func startSound() {
         oscillator.start()
     }
     
-    public func stopSound(){
+    open func stopSound(){
         oscillator.stop()
     }
     
@@ -141,8 +149,8 @@ void ofApp::setup(){
 }
 ```
 
-This will create an instance of our `OscillatorInstrument` class called "Instrument" as soon as our 
-app has started. 
+This will create an instance of our `OscillatorInstrument` class called "Instrument" as soon as 
+our app has started. 
 
 Now, we want to give our app the ability to start and stop our oscillator. To do that, we'll add a 
 call to our "Stop" method inside of the `mousePressed` event method:
