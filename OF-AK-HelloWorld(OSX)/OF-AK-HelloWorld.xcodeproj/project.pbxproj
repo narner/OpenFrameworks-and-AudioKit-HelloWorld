@@ -343,7 +343,7 @@
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 					"$(PROJECT_DIR)",
-					"/Users/nicholasarner/Development/AudioKit/Frameworks/AudioKit-macOS",
+					"OpenFrameworks-and-AudioKit-HelloWorld/OF-AK-HelloWorld(OSX)/AudioKit.framework\nOpenFrameworks-and-AudioKit-HelloWorld/OF-AK-HelloWorld(OSX)/AudioKit.framework\n",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../../libs/glut/lib/osx\"";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -377,7 +377,7 @@
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 					"$(PROJECT_DIR)",
-					"/Users/nicholasarner/Development/AudioKit/Frameworks/AudioKit-macOS",
+					"OpenFrameworks-and-AudioKit-HelloWorld/OF-AK-HelloWorld(OSX)/AudioKit.framework\nOpenFrameworks-and-AudioKit-HelloWorld/OF-AK-HelloWorld(OSX)/AudioKit.framework\n",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../../libs/glut/lib/osx\"";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
