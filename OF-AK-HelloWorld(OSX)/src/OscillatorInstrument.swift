@@ -9,7 +9,7 @@
 import Foundation
 import AudioKit
 
-public class OscillatorInstrument: NSObject {
+open class OscillatorInstrument: NSObject {
     var oscillator = AKOscillator()
     
     public override init() {
@@ -17,11 +17,11 @@ public class OscillatorInstrument: NSObject {
         AudioKit.start()
     }
     
-    public func startSound() {
+    open func startSound() {
         oscillator.start()
     }
     
-    public func stopSound(){
+    open func stopSound(){
         oscillator.stop()
     }
     
