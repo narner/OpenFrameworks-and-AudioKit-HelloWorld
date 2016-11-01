@@ -16,11 +16,11 @@ pages that you like can also be implemented in your Open Frameworks project.
 
 Before we start, make sure that you have: 
 
-1) [Xcode 8](https://developer.apple.com/xcode/download/) installed 
+1) [Xcode 8.0 or higher](https://developer.apple.com/xcode/download/) installed 
 
-2) [OpenFrameworks 0.9.4](http://openframeworks.cc/download/) downloaded for OS X
+2) [OpenFrameworks 0.9.6](http://openframeworks.cc/download/) downloaded for OS X
 
-3) You've downloaded the [AudioKit-OSX-3.4.2.zip](https://github.com/audiokit/AudioKit/releases/tag/v3.4.2).
+3) You've downloaded the [AudioKit-OSX-3.4.3.zip](https://github.com/audiokit/AudioKit/releases/tag/v3.4.3).
 
 We can create our OpenFrameworks project now. Using the Project Generator, go ahead 
 and create a new OS X project. Call it "OF-AK-HelloWorld", and set its location to be inside of 
@@ -44,8 +44,8 @@ Your file information will look like this at first:
 Again, it's important to remember that because we're changing the file types, your OpenFrameworks 
 project will only compile on an OS X device. 
 
-Because AudioKit 3.4.2 requires Swift 3.0, our app's Deployment Target needs to be OS X 10.11. Go 
-to your project's "General" tab 
+Because AudioKit 3.4.2 and above requires Swift 3.0, our app's Deployment Target needs to be OS X 
+10.11. Go to your project's "General" tab 
 
 ![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/generalTab.png)
 
