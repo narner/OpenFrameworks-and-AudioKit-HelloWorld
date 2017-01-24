@@ -16,11 +16,11 @@ pages that you like can also be implemented in your Open Frameworks project.
 
 Before we start, make sure that you have: 
 
-1) [Xcode 8.0 or higher](https://developer.apple.com/xcode/download/) installed 
+1) [Xcode 8.2.1 or higher](https://developer.apple.com/xcode/download/) installed 
 
-2) [OpenFrameworks 0.9.6](http://openframeworks.cc/download/) downloaded for OS X
+2) [OpenFrameworks 0.9.4](http://openframeworks.cc/download/) or later downloaded for OS X
 
-3) You've downloaded the [AudioKit-OSX-3.4.3.zip](https://github.com/audiokit/AudioKit/releases/tag/v3.4.3).
+3) You've downloaded the [AudioKit-OSX-3.5.zip](https://github.com/audiokit/AudioKit/releases/tag/v3.5).
 
 We can create our OpenFrameworks project now. Using the Project Generator, go ahead 
 and create a new OS X project. Call it "OF-AK-HelloWorld", and set its location to be inside of 
@@ -44,8 +44,8 @@ Your file information will look like this at first:
 Again, it's important to remember that because we're changing the file types, your OpenFrameworks 
 project will only compile on an OS X device. 
 
-Because AudioKit 3.4.2 and above requires Swift 3.0, our app's Deployment Target needs to be OS X 
-10.11. Go to your project's "General" tab 
+Because AudioKit 3.5 and above requires Swift 3.2, our app's Deployment Target needs to be OS X 
+10.11 or higher. Go to your project's "General" tab 
 
 ![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/generalTab.png)
 
@@ -53,29 +53,8 @@ and make sure that the Deployment Target is set to 10.11.
 
 ### Adding AudioKit
 
-First, we're going to compile the AudioKit framework for OS X. AudioKit comes with pre-compiled
-frameworks, but due to variations from machine to machine, we recommend download the source and
-compiling for your set up directly.
-
-From the command line, change directory into the AudioKit Frameworks folder, and run the 
-build script as follows: 
-
-```
-> cd Downloads/AudioKit-3.1.1/Frameworks/
-> PLATFORMS=OSX ./build_frameworks.sh
-```
-
-Now, we're going to add in the path to the AudioKit OS X Framework. Go to Build Settings in 
-Xcode, and search for "Framework Search Paths" under your Target:
-
-![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/frameworkSearchPaths.png)
-
-And enter the path to your AudioKit-OSX framework:
-
-![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/AudioKitFrameworkSearchPath.png)
-
-Your path will look different based on where the framework is on your machine. If you're planning
-on distributing your app, we recommend copying the framework into your project:
+AudioKit comes with pre-compiled frameworks. If you're planning on distributing your app, we 
+recommend copying the framework into your project:
 
 ![Alt Text](https://github.com/narner/OpenFrameworks-and-AudioKit-HelloWorld/raw/master/tutorialImages/copiedFramework.png)
 
