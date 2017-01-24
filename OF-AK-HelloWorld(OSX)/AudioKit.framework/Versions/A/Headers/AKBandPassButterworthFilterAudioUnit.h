@@ -6,23 +6,11 @@
 //  Copyright (c) 2016 Aurelius Prochazka. All rights reserved.
 //
 
-#ifndef AKBandPassButterworthFilterAudioUnit_h
-#define AKBandPassButterworthFilterAudioUnit_h
+#pragma once
+#import "AKAudioUnit.h"
 
-#import <AudioToolbox/AudioToolbox.h>
-
-@interface AKBandPassButterworthFilterAudioUnit : AUAudioUnit
+@interface AKBandPassButterworthFilterAudioUnit : AKAudioUnit
 @property (nonatomic) float centerFrequency;
 @property (nonatomic) float bandwidth;
-
-- (void)start;
-- (void)stop;
-- (BOOL)isPlaying;
-- (void)setUpParameterRamp;
-- (BOOL)isSetUp;
-
-@property double rampTime;
-
 @end
 
-#endif /* AKBandPassButterworthFilterAudioUnit_h */

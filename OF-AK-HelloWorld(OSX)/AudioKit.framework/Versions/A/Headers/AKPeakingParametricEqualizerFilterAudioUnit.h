@@ -6,24 +6,11 @@
 //  Copyright (c) 2016 Aurelius Prochazka. All rights reserved.
 //
 
-#ifndef AKPeakingParametricEqualizerFilterAudioUnit_h
-#define AKPeakingParametricEqualizerFilterAudioUnit_h
+#pragma once
+#import "AKAudioUnit.h"
 
-#import <AudioToolbox/AudioToolbox.h>
-
-@interface AKPeakingParametricEqualizerFilterAudioUnit : AUAudioUnit
+@interface AKPeakingParametricEqualizerFilterAudioUnit : AKAudioUnit
 @property (nonatomic) float centerFrequency;
 @property (nonatomic) float gain;
 @property (nonatomic) float q;
-
-- (void)start;
-- (void)stop;
-- (BOOL)isPlaying;
-- (void)setUpParameterRamp;
-- (BOOL)isSetUp;
-
-@property double rampTime;
-
 @end
-
-#endif /* AKPeakingParametricEqualizerFilterAudioUnit_h */

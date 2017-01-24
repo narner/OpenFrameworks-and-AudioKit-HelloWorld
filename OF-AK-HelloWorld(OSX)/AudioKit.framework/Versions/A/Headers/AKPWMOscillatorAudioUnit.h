@@ -6,26 +6,15 @@
 //  Copyright (c) 2016 Aurelius Prochazka. All rights reserved.
 //
 
-#ifndef AKPWMOscillatorAudioUnit_h
-#define AKPWMOscillatorAudioUnit_h
+#pragma once
+#import "AKAudioUnit.h"
 
-#import <AudioToolbox/AudioToolbox.h>
-
-@interface AKPWMOscillatorAudioUnit : AUAudioUnit
+@interface AKPWMOscillatorAudioUnit : AKAudioUnit
 @property (nonatomic) float frequency;
 @property (nonatomic) float amplitude;
 @property (nonatomic) float pulseWidth;
 @property (nonatomic) float detuningOffset;
 @property (nonatomic) float detuningMultiplier;
-
-- (void)start;
-- (void)stop;
-- (BOOL)isPlaying;
-- (void)setUpParameterRamp;
-- (BOOL)isSetUp;
-
-@property double rampTime;
-
 @end
 
-#endif /* AKPWMOscillatorAudioUnit_h */
+

@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
-		E4485B861DC8B6A50024BA4E /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4485B841DC8B69F0024BA4E /* AudioKit.framework */; };
-		E4485B871DC8B6A50024BA4E /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E4485B841DC8B69F0024BA4E /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E45945321E36EEEF001A734B /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45945301E36EEE1001A734B /* AudioKit.framework */; };
+		E45945331E36EEEF001A734B /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E45945301E36EEE1001A734B /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E45C623F1CBDB1C60062F645 /* OscillatorInstrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45C623E1CBDB1C60062F645 /* OscillatorInstrument.swift */; };
 		E4B69E200A3A1BDC003C02F2 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.mm */; };
 		E4B69E210A3A1BDC003C02F2 /* ofApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.mm */; };
@@ -39,7 +39,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E4485B871DC8B6A50024BA4E /* AudioKit.framework in Embed Frameworks */,
+				E45945331E36EEEF001A734B /* AudioKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -48,7 +48,7 @@
 
 /* Begin PBXFileReference section */
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
-		E4485B841DC8B69F0024BA4E /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
+		E45945301E36EEE1001A734B /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
 		E45C623E1CBDB1C60062F645 /* OscillatorInstrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OscillatorInstrument.swift; sourceTree = "<group>"; };
 		E4B69B5B0A3A1756003C02F2 /* OF-AK-HelloWorldDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OF-AK-HelloWorldDebug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69E1D0A3A1BDC003C02F2 /* main.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = main.mm; path = src/main.mm; sourceTree = SOURCE_ROOT; };
@@ -64,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4485B861DC8B6A50024BA4E /* AudioKit.framework in Frameworks */,
+				E45945321E36EEEF001A734B /* AudioKit.framework in Frameworks */,
 				E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,7 +97,7 @@
 		E4B69B4A0A3A1720003C02F2 = {
 			isa = PBXGroup;
 			children = (
-				E4485B841DC8B69F0024BA4E /* AudioKit.framework */,
+				E45945301E36EEE1001A734B /* AudioKit.framework */,
 				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
 				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
 				E4B69E1C0A3A1BDC003C02F2 /* src */,

@@ -6,24 +6,13 @@
 //  Copyright (c) 2016 Aurelius Prochazka. All rights reserved.
 //
 
-#ifndef AKFluteAudioUnit_h
-#define AKFluteAudioUnit_h
+#pragma once
+#import "AKAudioUnit.h"
 
-#import <AudioToolbox/AudioToolbox.h>
-
-@interface AKFluteAudioUnit : AUAudioUnit
+@interface AKFluteAudioUnit : AKAudioUnit
 @property (nonatomic) float frequency;
 @property (nonatomic) float amplitude;
 
 - (void)triggerFrequency:(float)frequency amplitude:(float)amplitude;
-- (void)start;
-- (void)stop;
-- (BOOL)isPlaying;
-- (void)setUpParameterRamp;
-- (BOOL)isSetUp;
-
-@property double rampTime;
 
 @end
-
-#endif /* AKFluteAudioUnit_h */

@@ -6,22 +6,9 @@
 //  Copyright (c) 2016 Aurelius Prochazka. All rights reserved.
 //
 
-#ifndef AKToneComplementFilterAudioUnit_h
-#define AKToneComplementFilterAudioUnit_h
+#pragma once
+#import "AKAudioUnit.h"
 
-#import <AudioToolbox/AudioToolbox.h>
-
-@interface AKToneComplementFilterAudioUnit : AUAudioUnit
+@interface AKToneComplementFilterAudioUnit : AKAudioUnit
 @property (nonatomic) float halfPowerPoint;
-
-- (void)start;
-- (void)stop;
-- (BOOL)isPlaying;
-- (void)setUpParameterRamp;
-- (BOOL)isSetUp;
-
-@property double rampTime;
-
 @end
-
-#endif /* AKToneComplementFilterAudioUnit_h */

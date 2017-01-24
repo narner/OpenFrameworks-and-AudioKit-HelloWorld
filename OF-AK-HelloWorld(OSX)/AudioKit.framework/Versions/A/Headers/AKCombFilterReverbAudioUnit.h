@@ -6,22 +6,11 @@
 //  Copyright (c) 2016 Aurelius Prochazka. All rights reserved.
 //
 
-#ifndef AKCombFilterReverbAudioUnit_h
-#define AKCombFilterReverbAudioUnit_h
+#pragma once
+#import "AKAudioUnit.h"
 
-#import <AudioToolbox/AudioToolbox.h>
-
-@interface AKCombFilterReverbAudioUnit : AUAudioUnit
+@interface AKCombFilterReverbAudioUnit : AKAudioUnit
 @property (nonatomic) float reverbDuration;
 - (void)setLoopDuration:(float)duration;
-- (void)start;
-- (void)stop;
-- (BOOL)isPlaying;
-- (void)setUpParameterRamp;
-- (BOOL)isSetUp;
-
-@property double rampTime;
-
 @end
 
-#endif /* AKCombFilterReverbAudioUnit_h */

@@ -6,22 +6,10 @@
 //  Copyright (c) 2016 Aurelius Prochazka. All rights reserved.
 //
 
-#ifndef AKHighPassButterworthFilterAudioUnit_h
-#define AKHighPassButterworthFilterAudioUnit_h
+#pragma once
+#import "AKAudioUnit.h"
 
-#import <AudioToolbox/AudioToolbox.h>
-
-@interface AKHighPassButterworthFilterAudioUnit : AUAudioUnit
+@interface AKHighPassButterworthFilterAudioUnit : AKAudioUnit
 @property (nonatomic) float cutoffFrequency;
-
-- (void)start;
-- (void)stop;
-- (BOOL)isPlaying;
-- (void)setUpParameterRamp;
-- (BOOL)isSetUp;
-
-@property double rampTime;
-
 @end
 
-#endif /* AKHighPassButterworthFilterAudioUnit_h */

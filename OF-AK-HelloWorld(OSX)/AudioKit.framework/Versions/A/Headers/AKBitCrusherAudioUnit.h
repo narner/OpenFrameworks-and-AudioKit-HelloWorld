@@ -6,23 +6,11 @@
 //  Copyright (c) 2016 Aurelius Prochazka. All rights reserved.
 //
 
-#ifndef AKBitCrusherAudioUnit_h
-#define AKBitCrusherAudioUnit_h
+#pragma once
+#import "AKAudioUnit.h"
 
-#import <AudioToolbox/AudioToolbox.h>
-
-@interface AKBitCrusherAudioUnit : AUAudioUnit
+@interface AKBitCrusherAudioUnit : AKAudioUnit
 @property (nonatomic) float bitDepth;
 @property (nonatomic) float sampleRate;
-
-- (void)start;
-- (void)stop;
-- (BOOL)isPlaying;
-- (void)setUpParameterRamp;
-- (BOOL)isSetUp;
-
-@property double rampTime;
-
 @end
 
-#endif /* AKBitCrusherAudioUnit_h */

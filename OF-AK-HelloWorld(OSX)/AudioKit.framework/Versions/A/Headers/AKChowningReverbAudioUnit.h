@@ -6,15 +6,9 @@
 //  Copyright (c) 2016 Aurelius Prochazka. All rights reserved.
 //
 
-#ifndef AKChowningReverbAudioUnit_h
-#define AKChowningReverbAudioUnit_h
+#pragma once
 
-#import <AudioToolbox/AudioToolbox.h>
+#import "AKAudioUnit.h"
 
-@interface AKChowningReverbAudioUnit : AUAudioUnit
-- (void)start;
-- (void)stop;
-- (BOOL)isPlaying;
+@interface AKChowningReverbAudioUnit : AKAudioUnit
 @end
-
-#endif /* AKChowningReverbAudioUnit_h */

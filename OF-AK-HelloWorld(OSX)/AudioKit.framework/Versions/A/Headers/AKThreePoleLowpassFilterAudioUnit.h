@@ -6,24 +6,12 @@
 //  Copyright (c) 2016 Aurelius Prochazka. All rights reserved.
 //
 
-#ifndef AKThreePoleLowpassFilterAudioUnit_h
-#define AKThreePoleLowpassFilterAudioUnit_h
+#pragma once
+#import "AKAudioUnit.h"
 
-#import <AudioToolbox/AudioToolbox.h>
-
-@interface AKThreePoleLowpassFilterAudioUnit : AUAudioUnit
+@interface AKThreePoleLowpassFilterAudioUnit : AKAudioUnit
 @property (nonatomic) float distortion;
 @property (nonatomic) float cutoffFrequency;
 @property (nonatomic) float resonance;
-
-- (void)start;
-- (void)stop;
-- (BOOL)isPlaying;
-- (void)setUpParameterRamp;
-- (BOOL)isSetUp;
-
-@property double rampTime;
-
 @end
 
-#endif /* AKThreePoleLowpassFilterAudioUnit_h */

@@ -6,12 +6,11 @@
 //  Copyright (c) 2016 Aurelius Prochazka. All rights reserved.
 //
 
-#ifndef AKMetalBarAudioUnit_h
-#define AKMetalBarAudioUnit_h
+#pragma once
 
-#import <AudioToolbox/AudioToolbox.h>
+#import "AKAudioUnit.h"
 
-@interface AKMetalBarAudioUnit : AUAudioUnit
+@interface AKMetalBarAudioUnit : AKAudioUnit
 @property (nonatomic) float leftBoundaryCondition;
 @property (nonatomic) float rightBoundaryCondition;
 @property (nonatomic) float decayDuration;
@@ -21,14 +20,7 @@
 @property (nonatomic) float strikeWidth;
 
 - (void)trigger;
-- (void)start;
-- (void)stop;
-- (BOOL)isPlaying;
-- (void)setUpParameterRamp;
-- (BOOL)isSetUp;
-
-@property double rampTime;
 
 @end
 
-#endif /* AKMetalBarAudioUnit_h */
+
