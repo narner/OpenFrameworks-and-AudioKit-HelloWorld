@@ -3,7 +3,7 @@
 //  AudioKit
 //
 //  Created by Aurelius Prochazka, revision history on Github.
-//  Copyright (c) 2016 Aurelius Prochazka. All rights reserved.
+//  Copyright © 2017 Aurelius Prochazka. All rights reserved.
 //
 
 #pragma once
@@ -22,8 +22,8 @@
 
 - (void)setupWaveform:(UInt32)waveform size:(int)size;
 - (void)setWaveform:(UInt32)waveform withValue:(float)value atIndex:(UInt32)index;
-- (void)startNote:(int)note velocity:(int)velocity;
-- (void)stopNote:(int)note;
+- (void)startNote:(uint8_t)note velocity:(uint8_t)velocity;
+- (void)stopNote:(uint8_t)note;
 
 @end
 
