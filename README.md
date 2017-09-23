@@ -16,11 +16,11 @@ pages that you like can also be implemented in your Open Frameworks project.
 
 Before we start, make sure that you have: 
 
-1) [Xcode 8.3.1 or higher](https://developer.apple.com/xcode/download/) installed 
+1) [Xcode 9](https://developer.apple.com/xcode/download/) installed 
 
 2) [OpenFrameworks 0.9.4](http://openframeworks.cc/download/) or later downloaded for OS X
 
-3) You've downloaded the [AudioKit-OSX-3.6.zip](https://github.com/audiokit/AudioKit/releases/tag/v3.6).
+3) You've downloaded the [AudioKit-macOS-3.6.zip](https://github.com/AudioKit/AudioKit/releases/tag/v4.0).
 
 We can create our OpenFrameworks project now. Using the Project Generator, go ahead 
 and create a new OS X project. Call it "OF-AK-HelloWorld", and set its location to be inside of 
